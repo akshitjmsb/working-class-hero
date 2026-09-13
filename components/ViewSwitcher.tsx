@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import CitySwitcher from '@/components/CitySwitcher';
 import { useCategories } from '@/lib/use-categories';
 
@@ -28,7 +29,7 @@ export default function ViewSwitcher({
   const { AREA_ACCENT } = useCategories();
   return (
     <div className="pointer-events-none fixed inset-x-0 bottom-[max(0.9rem,env(safe-area-inset-bottom))] z-20 flex flex-col items-center gap-2 px-3">
-      <CitySwitcher />
+      <div className="pointer-events-auto flex flex-wrap items-center justify-center gap-2"><CitySwitcher /><Link href="/target-companies" className="rounded-xl border border-black/10 bg-white px-3 py-2 text-sm font-bold text-asphalt shadow-sm">Target companies</Link></div>
       <div className="pointer-events-auto flex items-center gap-1.5 rounded-2xl border border-black/5 bg-white/90 p-1.5 shadow-xl backdrop-blur-xl">
         {/* Map / List segmented control */}
         <div className="flex items-center rounded-xl bg-black/[0.04] p-0.5">
