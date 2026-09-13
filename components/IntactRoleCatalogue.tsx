@@ -31,7 +31,6 @@ export default function IntactRoleCatalogue({
   snapshot: CatalogueSnapshot;
 }) {
   const [query, setQuery] = useState("");
-  const [city, setCity] = useState("");
   const [category, setCategory] = useState("");
   const [track, setTrack] = useState("");
   const [page, setPage] = useState(0);
@@ -43,7 +42,6 @@ export default function IntactRoleCatalogue({
             fold(
               [r.title, r.id, r.summary, r.department, ...r.skills].join(" "),
             ).includes(fold(query))) &&
-          (!city || r.locations.some((l) => l.city === city)) &&
           (!category || r.category === category) &&
           (!track ||
             (track === "Student"
@@ -54,7 +52,7 @@ export default function IntactRoleCatalogue({
                   ? /contract|secondment|replacement/i.test(r.employment)
                   : r.locations.some((l) => l.country === "Canada"))),
       ),
-    [query, city, category, track, snapshot.roles],
+    [query, category, track, snapshot.roles],
   );
   const current = Math.min(page, Math.max(0, Math.ceil(rows.length / 20) - 1));
   return (
@@ -71,23 +69,10 @@ export default function IntactRoleCatalogue({
             placeholder="e.g. business analyst, Python, R155432"
           />
         </label>
-        <label>
-          Office city
-          <select
-            value={city}
-            onChange={(e) => {
-              setCity(e.target.value);
-              setPage(0);
-            }}
-          >
-            <option value="">All offices</option>
-            {Object.keys(snapshot.meta.cityCounts)
-              .sort()
-              .map((c) => (
-                <option key={c}>{c}</option>
-              ))}
-          </select>
-        </label>
+        <div>
+          <strong>Office scope</strong>
+          <p>Montréal only</p>
+        </div>
         <label>
           Career category
           <select
@@ -106,7 +91,7 @@ export default function IntactRoleCatalogue({
           </select>
         </label>
         <label>
-          Route / geography
+          Entry route
           <select
             value={track}
             onChange={(e) => {
@@ -115,7 +100,6 @@ export default function IntactRoleCatalogue({
             }}
           >
             <option value="">All postings</option>
-            <option value="Canada">Canada</option>
             <option value="Student">Internships / co-ops</option>
             <option value="Development">Development programmes</option>
             <option value="Contract">Contracts / replacements</option>
@@ -123,8 +107,9 @@ export default function IntactRoleCatalogue({
         </label>
       </div>
       <p role="status" className="research-meta">
-        {rows.length} of {snapshot.roles.length} postings · Snapshot: September
-        13, 2026 · Search includes description summaries and skill signals.
+        {rows.length} of {snapshot.roles.length} Montréal postings · Snapshot:
+        September 13, 2026 · Search includes description summaries and skill
+        signals.
       </p>
       {!rows.length && (
         <p>
@@ -133,7 +118,6 @@ export default function IntactRoleCatalogue({
             className="research-button"
             onClick={() => {
               setQuery("");
-              setCity("");
               setCategory("");
               setTrack("");
               setPage(0);

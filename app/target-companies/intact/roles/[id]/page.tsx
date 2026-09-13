@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
-import snapshot from "@/lib/target-companies/intact-jobs.json";
+import snapshot from "@/lib/target-companies/intact-montreal";
 export function generateStaticParams() {
   return snapshot.roles.map((r) => ({ id: r.id }));
 }
@@ -155,7 +155,7 @@ export default async function RolePage({
         </p>
       </section>
       <section className="research-section">
-        <h2>Listed office options</h2>
+        <h2>Montréal office option</h2>
         <ul>
           {r.locations.map((l, i) => (
             <li key={i}>
@@ -164,9 +164,10 @@ export default async function RolePage({
           ))}
         </ul>
         <p>
-          Multiple locations describe options on one requisition, not separate
-          vacancies. For field roles, confirm the service territory and travel
-          expectations; the administrative office can be elsewhere.
+          Only the Montréal option is shown here. The original posting may offer
+          other offices on the same requisition. For field roles, confirm the
+          service territory and travel expectations; the administrative office
+          can be elsewhere.
         </p>
       </section>
       <section className="research-section">

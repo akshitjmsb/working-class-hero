@@ -19,9 +19,9 @@ export default function TargetCompaniesPage() {
         </span>
         <h2>Intact Financial Corporation</h2>
         <p>
-          203 postings across the Canada / Hong Kong careers board. Explore
-          functions, job requirements, office locations, compensation, and
-          evidence-backed hiring leads.
+          125 Montréal-listed postings, including roles with Montréal among
+          several office options. Explore functions, job requirements, office
+          locations, compensation, and evidence-backed hiring leads.
         </p>
         <span>Open Intact research →</span>
       </Link>

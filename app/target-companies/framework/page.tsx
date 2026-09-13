@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 const phases = [
   [
     "1. Define the company and scope",
-    "Confirm the legal group, brands, subsidiaries, countries and official domains. Record the user’s priorities without silently filtering by résumé. State which hiring boards are in scope and which remain outside it. Use a dated snapshot rather than implying continuous freshness.",
+    "Confirm the legal group, brands, subsidiaries, countries and official domains. Record the user’s geographic scope first: this search is Montréal only. Include multi-office roles only when Montréal is explicitly available; nearby cities are not substitutes. Do not silently filter by résumé. State which hiring boards are in scope and which remain outside it. Use a dated snapshot rather than implying continuous freshness.",
     "Scope statement; subsidiary / hiring-system map; check date.",
   ],
   [
@@ -258,12 +258,12 @@ export default function FrameworkPage() {
       <section className="research-section">
         <h2>Intact baseline and what a future pass should add</h2>
         <p>
-          The first application covers 203 requisitions from one public Canada /
-          Hong Kong board on September 13, 2026. All have summary pages; 26 have
-          additional curated qualification gates. No named current requisition
-          owner was established. The next extension would enumerate separate
-          subsidiary boards, deepen qualifications across the remaining roles
-          and verify team ownership for a selected work family.
+          The Intact dossier covers 125 Montréal-listed requisitions selected
+          from the September 13, 2026 board census. Twenty-four have additional
+          curated qualification gates. No named current requisition owner was
+          established. Future research should deepen Montréal team ownership and
+          requirements within this same geographic scope. Preserve the broader
+          raw census for provenance without displaying other-city roles.
         </p>
         <p>
           The implementation record is maintained in{" "}

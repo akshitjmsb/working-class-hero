@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import IntactRoleCatalogue from "@/components/IntactRoleCatalogue";
-import data from "@/lib/target-companies/intact-jobs.json";
+import data from "@/lib/target-companies/intact-montreal";
 export const metadata: Metadata = {
   title: "Intact | Target Companies | People Are Strange",
   description:
-    "203 Intact job descriptions, company analysis, salary bands, offices and evidence-based hiring leads. September 13, 2026.",
+    "125 Montréal Intact job descriptions, company analysis, salary bands, offices and evidence-based hiring leads. September 13, 2026.",
 };
 const corporate = "https://www.intactfc.com";
 function Role({ id }: { id: string }) {
@@ -45,7 +45,7 @@ const families = [
   [
     "Sales & Customer Service",
     "Licensed insurance advice, inbound sales and customer support combine service with regulated products and operating schedules. Training may be available, but office availability, language, shift coverage and licence conditions can still be gates.",
-    "R155406",
+    "",
   ],
   [
     "Legal",
@@ -81,16 +81,16 @@ export default function IntactPage() {
       </p>
       <h1>Intact Financial Corporation</h1>
       <p>
-        A company-first investigation of the employer, its open work and the
+        A Montréal-focused investigation of the employer, its open work and the
         people around that work. Your résumé has not been used to filter or rank
         the opportunities.
       </p>
       <div className="research-stats">
         {[
-          [203, "Unique postings"],
-          [197, "Canadian postings"],
-          [125, "Montréal office options"],
-          [92, "Toronto office options"],
+          [125, "Montréal postings"],
+          [41, "Technology roles"],
+          [19, "Claims roles"],
+          [14, "Internships / co-ops"],
         ].map(([n, label]) => (
           <div className="research-stat" key={label}>
             <strong>{n}</strong>
@@ -101,11 +101,11 @@ export default function IntactPage() {
       <div className="research-callout">
         <strong>Read this as a dated census, not a live feed.</strong>
         <p>
-          All 21 pages of the public Canada / Hong Kong board were collected and
-          all 203 linked descriptions reviewed. There are 197 Canada and 6 Hong
-          Kong requisitions. Multiple offices and multiple hires within one
-          requisition do not increase the count. Other Intact businesses can use
-          separate hiring systems; this is not a worldwide vacancy total.{" "}
+          Only roles explicitly listing Montréal are included: 125 requisitions
+          from the September 13 snapshot. Multi-office postings qualify when
+          Montréal is an option. Laval, Saint-Hyacinthe and other cities alone
+          do not qualify. The original board-wide census is retained for source
+          provenance. Confirm the Montréal office arrangement before applying.{" "}
           <a href="https://careers.intactfc.com/jobs">
             Verify current availability on Intact Careers
           </a>
@@ -116,7 +116,7 @@ export default function IntactPage() {
         {[
           ["company", "Company"],
           ["market", "Hiring landscape"],
-          ["roles", "All 203 roles"],
+          ["roles", "125 Montréal roles"],
           ["pathways", "Entry routes"],
           ["pay", "Pay & conditions"],
           ["locations", "Offices"],
@@ -198,8 +198,9 @@ export default function IntactPage() {
         <h2>Where the openings are</h2>
         <p>
           The official category mix is heavily weighted toward technology and
-          claims: 107 of 203 postings together. Category labels come from the
-          board and do not always match a reader’s intuitive job family.
+          claims: 60 of 125 Montréal postings together. Category labels come
+          from the board and do not always match a reader’s intuitive job
+          family.
         </p>
         <div className="research-bars">
           {Object.entries(data.meta.categories).map(([name, n]) => (
@@ -208,7 +209,7 @@ export default function IntactPage() {
               <strong>{n}</strong>
               <meter
                 min={0}
-                max={63}
+                max={41}
                 value={n}
                 aria-label={`${name}: ${n} postings`}
               />
@@ -217,7 +218,7 @@ export default function IntactPage() {
         </div>
         <p className="research-meta">
           Derived from the official snapshot. Office counts overlap; category
-          counts partition the 203 requisitions.
+          counts partition the 125 Montréal requisitions.
         </p>
         <div className="research-grid">
           {families.map(([name, description, id]) => (
@@ -234,14 +235,14 @@ export default function IntactPage() {
         </div>
       </section>
       <section id="roles" className="research-section">
-        <h2>Every captured opening</h2>
+        <h2>Every Montréal opening</h2>
         <p>
-          Search all 203 roles. Each has its own page with an original summary,
-          office addresses, salary and bonus fields where published, employment
-          conditions, requirement signals, timing notes and the employer’s
-          complete job description. Twenty-six selected roles also have a closer
-          breakdown of qualification gates. Keyword signals alone are not proof
-          that a skill is mandatory.
+          Search all 125 Montréal roles. Each has its own page with an original
+          summary, office addresses, salary and bonus fields where published,
+          employment conditions, requirement signals, timing notes and the
+          employer’s complete job description. Twenty-four selected roles also
+          have a closer breakdown of qualification gates. Keyword signals alone
+          are not proof that a skill is mandatory.
         </p>
         <IntactRoleCatalogue
           snapshot={{
@@ -297,8 +298,8 @@ export default function IntactPage() {
           <article>
             <h3>Students and co-ops</h3>
             <p>
-              Thirty postings are identified as internships or co-ops in the
-              snapshot. Student status, programme requirements, work-term
+              Fourteen Montréal postings are identified as internships or co-ops
+              in the snapshot. Student status, programme requirements, work-term
               availability and location can matter as much as technical skills.
               Several winter 2027 positions specify September 25 application
               timing; one has an inconsistent year. Check each role’s timing
@@ -311,9 +312,7 @@ export default function IntactPage() {
               <Role id="R155588" /> states 0–2 years but also calls for advanced
               investment-related education; low experience does not mean no
               specialist preparation. <Role id="R155612" /> is a six-month
-              claims-assistant contract with an experience requirement.{" "}
-              <Role id="R155406" /> has an October 30, 2026 start and schedule
-              conditions.
+              claims-assistant contract with an experience requirement.
             </p>
           </article>
           <article>
@@ -339,10 +338,11 @@ export default function IntactPage() {
       <section id="pay" className="research-section">
         <h2>Compensation and employment conditions</h2>
         <p>
-          The snapshot captures 195 published salary ranges and 160 bonus
-          targets. The examples below are Canadian annual base ranges; bonuses
-          are targets, not guaranteed compensation. Contract eligibility, hours
-          and location conditions remain governed by the individual description.
+          The Montréal selection captures 122 published salary ranges and 106
+          bonus targets. The examples below are Canadian annual base ranges;
+          bonuses are targets, not guaranteed compensation. Contract
+          eligibility, hours and location conditions remain governed by the
+          individual description.
         </p>
         <div className="research-table-wrap">
           <table>
@@ -357,7 +357,6 @@ export default function IntactPage() {
             <tbody>
               {[
                 ["R155612", "1 year; six-month contract"],
-                ["R155406", "Sales schedule and October start"],
                 ["R155541", "Training and conflicting licence language"],
                 ["R155573", "On site five days; 35 hours"],
                 ["R155445", "Graduate window; June 2027 programme"],
@@ -390,13 +389,12 @@ export default function IntactPage() {
         </div>
         <h3>What “hybrid” and “full-time” do not resolve</h3>
         <p>
-          120 descriptions contain an explicit hybrid tag. That does not
+          88 Montréal descriptions contain an explicit hybrid tag. That does not
           establish a universal attendance policy. Facilities work can require
           five days on site, field work can require travel, and a listed office
           can differ from the territory served. Full-time also describes hours
           rather than contract duration: this board includes fixed-term
-          replacements, six-month support work and a one-year operational
-          management assignment.
+          replacements and six-month support work.
         </p>
         <p>
           Benefits language is not a substitute for an offer. Confirm pension or
@@ -410,50 +408,24 @@ export default function IntactPage() {
         </p>
       </section>
       <section id="locations" className="research-section">
-        <h2>Offices and proximity</h2>
+        <h2>Montréal office and proximity</h2>
         <p>
-          Proximity makes Intact your first target, but the nearest building is
-          not automatically the contractual office for a role. No home address
-          or commute time has been assumed. Filter by city, then inspect the
-          actual address on the role page.
-        </p>
-        <div className="research-table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>City</th>
-                <th>Requisitions offering this city</th>
-              </tr>
-            </thead>
-            <tbody>
-              {Object.entries(data.meta.cityCounts).map(([city, n]) => (
-                <tr key={city}>
-                  <td>{city}</td>
-                  <td>{n}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        <p>
-          Examples from descriptions include 2020 boulevard Robert-Bourassa in
-          Montréal, 600 rue Lucien-Paiement in Laval, 2450 rue Girouard Ouest in
-          Saint-Hyacinthe, 700 University Avenue in Toronto and 200 Granville
-          Street in Vancouver. These are posting addresses, not a claim that
-          every role in the city uses the same office.
+          All 125 included requisitions list 2020 boulevard Robert-Bourassa,
+          Suite 100, Montréal. A role can also advertise other offices; this
+          dossier shows its Montréal option only.
         </p>
         <p>
-          Field-role examples can reference Sault Ste. Marie while listing
-          Ottawa, or Thunder Bay while listing Toronto. Treat the service area
-          in the description as a separate constraint from the structured office
-          field.
+          Confirm that Montréal can be your contractual base and ask about
+          attendance, travel and any field territory. No home address or commute
+          time has been assumed. Roles offered only in Laval, Saint-Hyacinthe,
+          Dorval or another city are outside your stated search.
         </p>
       </section>
       <section id="people" className="research-section">
         <h2>Who leads the organisation—and who may help identify a team</h2>
         <div className="research-callout">
           <strong>
-            No named hiring manager was verified for any of the 203 current
+            No named hiring manager was verified for any of the 125 Montréal
             requisitions.
           </strong>
           <p>
@@ -769,12 +741,6 @@ export default function IntactPage() {
             no corrected deadline has been invented.
           </li>
           <li>
-            <Role id="R155507" /> gives September 17, 2026;{" "}
-            <Role id="R155521" /> gives September 18; <Role id="R155603" />{" "}
-            gives September 25. Check the original closing time and employer
-            timezone label.
-          </li>
-          <li>
             <Role id="R154991" /> uses a French director title alongside an
             English manager title. Confirm the actual grade and management
             scope.
@@ -786,14 +752,9 @@ export default function IntactPage() {
             headcounts.
           </li>
           <li>
-            <Role id="R151119" /> mentions Calgary and Edmonton in the
-            description while the structured location data lists Calgary. Read
-            both sources before ruling out an office.
-          </li>
-          <li>
-            Search-engine totals differed from the live board. The 203 figure is
-            based on the complete board crawl and deduplication on the check
-            date, not search snippets.
+            The 125 Montréal roles were selected from the complete
+            203-requisition board crawl using explicit office locations, not
+            search snippets or a broad Québec-region filter.
           </li>
         </ul>
       </section>
@@ -850,8 +811,9 @@ export default function IntactPage() {
         <h2>Evidence and limits</h2>
         <p>
           The vacancy dataset is a September 13, 2026 snapshot of the official
-          Canada / Hong Kong careers board: 21 result pages, 203 unique
-          requisitions and 203 job descriptions. Every role page links to its
+          Canada / Hong Kong careers board: 21 result pages and 203 descriptions
+          collected as source material, narrowed to 125 Montréal-listed
+          requisitions for this dossier. Every included role page links to its
           own source. Summaries are original paraphrases; the employer’s full
           descriptions remain on its site. Salary, bonus, locations and
           classification fields are extracted facts; experience and tool signals

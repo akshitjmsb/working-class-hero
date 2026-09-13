@@ -5,7 +5,7 @@ Version 1 — 2026-09-13. First application: Intact Financial Corporation.
 Understand an employer and its actual hiring landscape before candidate matching. Preserve explicit user constraints: Intact is priority 1 because of proximity; do not use the résumé to filter. No outreach is authorised by a research request.
 
 ## Repeatable workflow
-1. Establish legal entity, brands, official domains, geography, board coverage and snapshot date.
+1. Establish legal entity, brands, official domains, geography, board coverage and snapshot date. The user’s search scope is Montréal only: include multi-office postings only when Montréal is explicit, and exclude neighbouring cities alone. Apply this geographic scope to counts, examples, filters and role routes; retain broader raw collection only as provenance.
 2. Read latest annual report, relevant interim results, current leadership and operating-unit sources. Keep business facts distinct from interpretation.
 3. Enumerate official board pagination. Record reported totals; deduplicate on hiring-system + requisition ID. Multi-office postings count once. Count requisitions, not seats.
 4. Fetch each full official description. Preserve raw source privately for audit; record fetch time and canonical source URL. Do not publish wholesale copyrighted descriptions.
