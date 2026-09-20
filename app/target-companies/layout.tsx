@@ -19,6 +19,7 @@ export default function ResearchLayout({
         <nav aria-label="Company research">
           <Link href="/target-companies">Target companies</Link>
           <Link href="/target-companies/intact">Intact</Link>
+          <Link href="/target-companies/brp">BRP</Link>
           <Link href="/target-companies/framework">Research framework</Link>
         </nav>
       </header>

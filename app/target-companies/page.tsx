@@ -25,6 +25,18 @@ export default function TargetCompaniesPage() {
         </p>
         <span>Open Intact research →</span>
       </Link>
+      <Link className="research-company" href="/target-companies/brp">
+        <span className="research-meta">
+          Target 2 · Montréal · Checked September 19, 2026
+        </span>
+        <h2>BRP</h2>
+        <p>
+          49 Montréal requisitions at the René-Lévesque office: detailed
+          requirements, business analysis, salary disclosures and hiring-team
+          evidence.
+        </p>
+        <span>Open BRP research →</span>
+      </Link>
       <p>
         <Link href="/target-companies/framework">
           Reusable company research framework

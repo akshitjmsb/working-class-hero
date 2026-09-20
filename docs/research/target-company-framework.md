@@ -44,3 +44,6 @@ Reconcile counts; ensure unique IDs and valid locations/URLs; check all summarie
 /target-companies/{company} → full dossier and searchable census
 /target-companies/{company}/roles/{id} → per-role original summary and official source
 /target-companies/framework → user-facing reusable method
+
+## BRP refinements — 2026-09-19
+Validate language from the returned locale and titles, not the requested URL or a language parameter alone. Enumerate each official language board and reconcile stable IDs; translations can have additional postings and salary fields. Relevance-sorted pagination may change order across requests: reconcile against a complete official response where available. Resolve recruiter short links to actual requisition IDs before claiming current-role ownership. Prefer explicit description-body hours over generic metadata, while preserving the discrepancy. Deduplicate identical IDs across languages, not different IDs with similar titles. Record future-effective leadership changes separately from current appointments.

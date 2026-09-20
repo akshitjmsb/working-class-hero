@@ -256,6 +256,18 @@ export default function FrameworkPage() {
         </ul>
       </section>
       <section className="research-section">
+        <h2>BRP: improvements to the method</h2>
+        <p>
+          The <Link href="/target-companies/brp">BRP application</Link> adds
+          explicit locale checks, reconciliation of unstable pagination, and
+          resolution of recruiter short links to exact requisitions. Its 49
+          Montréal IDs include two French-only postings with salary bands.
+          Always inspect the actual response language, deduplicate by ID rather
+          than title, and compare the recruiter’s linked ID with the current
+          local vacancy.
+        </p>
+      </section>
+      <section className="research-section">
         <h2>Intact baseline and what a future pass should add</h2>
         <p>
           The Intact dossier covers 125 Montréal-listed requisitions selected
