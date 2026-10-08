@@ -7,6 +7,7 @@ import { Client } from '@modelcontextprotocol/client';
 import { StdioClientTransport } from '@modelcontextprotocol/client/stdio';
 import { callSystemTool } from '../lib/intelligence/tools';
 import { POST, GET } from '../app/api/intelligence/route';
+config({ path: '.env.intelligence.local', quiet: true });
 config({ path: '.env.local', quiet: true });
 
 const companyId = `test-${randomUUID()}`;
