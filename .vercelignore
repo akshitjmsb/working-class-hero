@@ -2,3 +2,5 @@
 .env*
 output/
 tmp/
+.wch-state/
+lib/target-companies/nesto/investigation-2026-10-08.json

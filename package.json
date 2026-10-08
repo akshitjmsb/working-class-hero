@@ -22,7 +22,12 @@
     "system": "tsx scripts/intelligence.ts",
     "system:mcp": "tsx scripts/intelligence-mcp.ts",
     "system:migrate": "tsx scripts/intelligence-migrate.ts",
-    "test:system": "node --import tsx --test tests/intelligence.test.ts"
+    "test:system": "node --import tsx --test tests/intelligence*.test.ts",
+    "system:flush": "tsx scripts/intelligence-maintenance.ts flush",
+    "system:status": "tsx scripts/intelligence-maintenance.ts status",
+    "system:backup": "tsx scripts/intelligence-maintenance.ts backup",
+    "system:verify-backup": "tsx scripts/intelligence-maintenance.ts verify-backup",
+    "system:restore": "tsx scripts/intelligence-maintenance.ts restore"
   },
   "dependencies": {
     "@deck.gl/core": "^9.3.9",

@@ -1,19 +1,42 @@
+import { randomUUID } from 'node:crypto';
 import { createMcpHandler } from '@modelcontextprotocol/server';
-import { hasBearerSecret } from '@/lib/cron-auth';
 import { createIntelligenceServer } from '@/lib/intelligence/mcp';
-
+import { authorize, readBody, privateHeaders } from '@/lib/intelligence/http';
+import { publicError } from '@/lib/intelligence/reliability';
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
-const handler = createMcpHandler(createIntelligenceServer);
-
+export const maxDuration = 60;
+const handler = createMcpHandler(() => createIntelligenceServer());
 async function handle(request: Request) {
-  if (!hasBearerSecret(request, process.env.INTELLIGENCE_ACCESS_TOKEN)) return Response.json({ error: 'Owner authorization required.' }, { status: 401, headers: { 'Cache-Control': 'private, no-store' } });
-  const origin = request.headers.get('origin');
-  if (origin && origin !== new URL(request.url).origin) return Response.json({ error: 'Origin not allowed.' }, { status: 403 });
-  if (request.method === 'POST' && Buffer.byteLength(await request.clone().text()) > 200000) return Response.json({ error: 'Request too large.' }, { status: 413 });
-  const response = await handler.fetch(request);
-  response.headers.set('Cache-Control', 'private, no-store, max-age=0');
-  return response;
+  const requestId = randomUUID();
+  try {
+    authorize(request);
+    const checked =
+      request.method === 'POST'
+        ? new Request(request.url, {
+            method: 'POST',
+            headers: request.headers,
+            body: await readBody(request),
+          })
+        : request;
+    const response = await handler.fetch(checked);
+    for (const [key, value] of Object.entries(privateHeaders))
+      response.headers.set(key, value);
+    response.headers.set('X-Request-Id', requestId);
+    console.info(
+      JSON.stringify({ system: 'wch-mcp', requestId, status: response.status }),
+    );
+    return response;
+  } catch (error) {
+    const safe = publicError(error);
+    console.warn(
+      JSON.stringify({ system: 'wch-mcp', requestId, status: safe.status }),
+    );
+    return Response.json(
+      { error: safe.message, retryable: safe.retryable, requestId },
+      { status: safe.status, headers: privateHeaders },
+    );
+  }
 }
 export const GET = handle;
 export const POST = handle;

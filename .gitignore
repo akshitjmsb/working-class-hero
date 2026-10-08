@@ -47,3 +47,5 @@ public/worker-*.js.map
 # Private local system initialization and memory
 /tmp/
 /lib/target-companies/nesto/investigation-2026-10-08.json
+
+/.wch-state/
