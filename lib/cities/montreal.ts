@@ -217,7 +217,7 @@ export const montreal: CityConfig = {
   cityPalette: PALETTE,
   areaAccent: PALETTE.asphalt,
 
-  metaTitle: 'People Are Strange — Montréal Industry Map',
+  metaTitle: 'Working Class Hero — Montréal Industry Map',
   metaDescription: "Montreal's AI, aerospace, energy and marine scenes on one living map. Every lab, startup, plant and port — what they're building, where they are.",
   loadingText: 'Mapping Montréal…',
   csvPrefix: 'montreal',

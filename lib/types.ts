@@ -1,4 +1,4 @@
-// ── People Are Strange — city industry maps ─────────────────────────────────
+// ── Working Class Hero — city industry maps ─────────────────────────────────
 // Multiple cities share one map and one data shape. Each city defines its own
 // industries (Montreal has AI/aerospace/energy/marine/gaming/lifesci; Victoria
 // and Vancouver reuse the shared tech, clean-tech, life-science, gaming, and

@@ -20,7 +20,7 @@ export async function GET(_req: Request, props: { params: Promise<{ city: string
 
   return NextResponse.json(
     {
-      name: `People Are Strange — ${city.name}`,
+      name: `Working Class Hero — ${city.name}`,
       short_name: city.name,
       description: city.metaDescription,
       start_url: `/${city.id}`,

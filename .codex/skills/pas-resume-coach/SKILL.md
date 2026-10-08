@@ -40,7 +40,7 @@ Run a conversational resume session without stale copies or manual uploads.
 
 After a verified master update, explain that PAS will detect the new revision when Matches opens or during the daily refresh, then rebuild the candidate profile and re-rank active jobs.
 
-- Matches: `https://people-are-strange-mtl.vercel.app/montreal?view=matches`
-- Resume status: `https://people-are-strange-mtl.vercel.app/settings/resume`
+- Matches: `https://working-class-hero.vercel.app/montreal?view=matches`
+- Resume status: `https://working-class-hero.vercel.app/settings/resume`
 
 For an immediate result, direct Akshit to open Matches. Otherwise, no manual action is required.

@@ -14,7 +14,7 @@ export async function generateMetadata({
   const r = data.roles.find((r) => r.id === id);
   return {
     title: r
-      ? `${r.title} | BRP Montréal | People Are Strange`
+      ? `${r.title} | BRP Montréal | Working Class Hero`
       : "Role not found",
     description: r?.summary,
   };

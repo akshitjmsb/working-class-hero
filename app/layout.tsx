@@ -13,13 +13,13 @@ const spaceGrotesk = Space_Grotesk({
 // Title, description, manifest and theme colour are per city and are set by
 // app/[city]/page.tsx. Only the city-agnostic shell lives here.
 export const metadata: Metadata = {
-  title: 'People Are Strange',
+  title: 'Working Class Hero',
   description: 'City industry maps — every company, lab and studio, mapped.',
-  applicationName: 'People Are Strange',
+  applicationName: 'Working Class Hero',
   appleWebApp: {
     capable: true,
     statusBarStyle: 'black-translucent',
-    title: 'People Are Strange',
+    title: 'Working Class Hero',
   },
   icons: {
     icon: '/icon.svg',

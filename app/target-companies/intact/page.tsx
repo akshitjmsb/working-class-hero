@@ -3,7 +3,7 @@ import Link from "next/link";
 import IntactRoleCatalogue from "@/components/IntactRoleCatalogue";
 import data from "@/lib/target-companies/intact-montreal";
 export const metadata: Metadata = {
-  title: "Intact | Target Companies | People Are Strange",
+  title: "Intact | Target Companies | Working Class Hero",
   description:
     "125 Montréal Intact job descriptions, company analysis, salary bands, offices and evidence-based hiring leads. September 13, 2026.",
 };

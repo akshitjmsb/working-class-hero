@@ -168,7 +168,7 @@ export default function MatchesView({ focusCompanyId, onClearCompanyFocus, onSho
                     {data.resumeSync.requiresReconnect ? 'Reconnect sync' : 'Resume settings'}
                   </Link>
                   <a
-                    href="https://github.com/akshitjmsb/people-are-strange/actions/workflows/refresh-roles.yml"
+                    href="https://github.com/akshitjmsb/working-class-hero/actions/workflows/refresh-roles.yml"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-bold text-asphalt/70 underline decoration-asphalt/20 underline-offset-2"

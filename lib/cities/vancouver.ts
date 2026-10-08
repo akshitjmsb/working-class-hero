@@ -152,7 +152,7 @@ export const vancouver: CityConfig = {
   cityPalette: PALETTE,
   areaAccent: PALETTE.mountainInk,
 
-  metaTitle: 'People Are Strange — Vancouver Industry Map',
+  metaTitle: 'Working Class Hero — Vancouver Industry Map',
   metaDescription: "Metro Vancouver's tech, gaming, clean-tech, life-science, aerospace and marine employers on one living map — what they build, where they are, and where to look for work.",
   loadingText: 'Mapping Vancouver…',
   csvPrefix: 'vancouver',

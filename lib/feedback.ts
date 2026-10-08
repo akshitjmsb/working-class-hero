@@ -5,7 +5,7 @@
 
 import type { AICompany } from './types';
 
-const REPO_URL = 'https://github.com/akshitjmsb/people-are-strange';
+const REPO_URL = 'https://github.com/akshitjmsb/working-class-hero';
 
 function issueUrl(title: string, body: string): string {
   return `${REPO_URL}/issues/new?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`;

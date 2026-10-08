@@ -3,7 +3,7 @@ import Link from "next/link";
 import data from "@/lib/target-companies/brp-jobs.json";
 import BRPRoleCatalogue from "@/components/BRPRoleCatalogue";
 export const metadata: Metadata = {
-  title: "BRP Montréal | Target Companies | People Are Strange",
+  title: "BRP Montréal | Target Companies | Working Class Hero",
   description:
     "49 Montréal BRP requisitions, detailed requirements, René-Lévesque office, business analysis and hiring-team evidence. Researched September 19, 2026.",
 };

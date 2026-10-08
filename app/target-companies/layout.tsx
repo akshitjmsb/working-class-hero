@@ -15,7 +15,7 @@ export default function ResearchLayout({
   return (
     <div className="research-shell">
       <header className="research-header">
-        <Link href="/">People Are Strange</Link>
+        <Link href="/">Working Class Hero</Link>
         <nav aria-label="Company research">
           <Link href="/target-companies">Target companies</Link>
           <Link href="/target-companies/intact">Intact</Link>

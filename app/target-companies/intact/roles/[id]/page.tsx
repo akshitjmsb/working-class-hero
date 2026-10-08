@@ -13,7 +13,7 @@ export async function generateMetadata({
   const { id } = await params;
   const r = snapshot.roles.find((r) => r.id === id);
   return {
-    title: r ? `${r.title} | Intact | People Are Strange` : "Role not found",
+    title: r ? `${r.title} | Intact | Working Class Hero` : "Role not found",
     description: r?.summary,
   };
 }

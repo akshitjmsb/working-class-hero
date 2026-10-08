@@ -212,7 +212,7 @@ export const victoria: CityConfig = {
   cityPalette: PALETTE,
   areaAccent: PALETTE.basaltInk,
 
-  metaTitle: 'People Are Strange — Victoria Industry Map',
+  metaTitle: 'Working Class Hero — Victoria Industry Map',
   metaDescription: "Victoria's tech, defense, ocean tech and government scenes on one living map. Every company, base, lab and agency — what they're building, where they are.",
   loadingText: 'Mapping Victoria…',
   csvPrefix: 'victoria',

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "Target Companies | People Are Strange",
+  title: "Target Companies | Working Class Hero",
   description:
     "Company research, open roles, hiring contacts and reusable research framework.",
 };
