@@ -491,7 +491,7 @@ export default function CityApp() {
       {view === 'map' && !activeCluster && (
         <div className="pointer-events-none absolute bottom-3 left-3 z-10">
           <p className="font-display text-xs font-extrabold tracking-tight text-asphalt/80 drop-shadow-[0_1px_2px_rgba(255,255,255,0.7)]">
-            People Are <span className="mtl-gradient-text">Strange</span>
+            Working Class <span className="mtl-gradient-text">Hero</span>
           </p>
           <p className="mt-1 font-display text-[10px] font-bold text-asphalt/55 drop-shadow-[0_1px_2px_rgba(255,255,255,0.7)]">
             {city.tagline}
