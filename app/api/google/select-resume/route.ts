@@ -22,7 +22,7 @@ export async function POST(req: NextRequest) {
   }
   const config = googleOAuthConfig(req.nextUrl.origin);
   if (fileId !== config.masterPdfFileId) {
-    return failure('Select PAS_Resume_MASTER.pdf. PAS rejects every other Drive file.', 400);
+    return failure('Select Akshit_Gupta_Resume.pdf. Working Class Hero rejects every other Drive file.', 400);
   }
 
   const [connection] = await db.select().from(googleDriveConnections)
@@ -40,7 +40,7 @@ export async function POST(req: NextRequest) {
   ]);
   const sync = await syncResumeProfile(db, { force: true });
   if (sync.state !== 'current' && sync.state !== 'updated') {
-    return failure(sync.error ?? 'PAS could not verify the selected master PDF.', 422);
+    return failure(sync.error ?? 'Working Class Hero could not verify the selected master PDF.', 422);
   }
 
   const response = NextResponse.json({ state: sync.state }, { headers: noStoreHeaders() });

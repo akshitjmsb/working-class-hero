@@ -304,7 +304,7 @@ function PipelinePanel({
         <div className="text-4xl" aria-hidden>🎯</div>
         <h2 className="mt-3 text-lg font-bold text-asphalt">Turn a match into a target</h2>
         <p className="mt-1 text-sm leading-relaxed text-asphalt/55">
-          Pursue the roles you genuinely want. PAS will keep them here and tell you what to do next.
+          Pursue the roles you genuinely want. Working Class Hero will keep them here and tell you what to do next.
         </p>
         <button
           type="button"
@@ -324,7 +324,7 @@ function PipelinePanel({
           <div>
             <p className="text-[10px] font-black uppercase tracking-[0.18em] text-plateau-pink">Job search command centre</p>
             <h2 className="mt-1 font-display text-xl font-bold">Move one opportunity forward</h2>
-            <p className="mt-1 text-sm text-white/60">Private to this device · roles from every PAS city</p>
+            <p className="mt-1 text-sm text-white/60">Private to this device · roles from every Working Class Hero city</p>
           </div>
           <div className="flex gap-5">
             <PipelineMetric value={active.length} label="active" />

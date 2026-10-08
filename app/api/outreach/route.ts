@@ -66,7 +66,7 @@ export async function POST(request: Request) {
     }
     if (resume.state === 'degraded') {
       return NextResponse.json(
-        { error: 'PAS could not verify the latest resume revision. Check Resume sync and try again.' },
+        { error: 'Working Class Hero could not verify the latest resume revision. Check Resume sync and try again.' },
         { status: 503 },
       );
     }

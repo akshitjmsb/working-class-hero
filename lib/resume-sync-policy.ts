@@ -44,7 +44,7 @@ export function classifyResumeSyncFailure(error: unknown): ResumeSyncFailureKind
 export function publicResumeSyncError(kind: ResumeSyncFailureKind, hasLastKnownGood = true): string {
   const retained = hasLastKnownGood
     ? ' Your last synced resume remains active.'
-    : ' PAS will retry without replacing the built-in matching profile.';
+    : ' Working Class Hero will retry without replacing the built-in matching profile.';
   switch (kind) {
     case 'auth':
       return `Google authorization needs to be renewed.${retained}`;
@@ -55,7 +55,7 @@ export function publicResumeSyncError(kind: ResumeSyncFailureKind, hasLastKnownG
     case 'configuration':
       return `Resume sync configuration needs attention.${retained}`;
     case 'source':
-      return `PAS could not read a valid resume revision.${retained}`;
+      return `Working Class Hero could not read a valid resume revision.${retained}`;
   }
 }
 

@@ -46,7 +46,7 @@ export default async function ResumeSettingsPage(
           </p>
           <h1 className="mt-2 font-display text-3xl font-bold">Master resume sync</h1>
           <p className="mt-3 max-w-2xl text-sm leading-relaxed text-asphalt/60">
-            PAS checks your canonical PDF whenever Matches opens and during the daily job refresh. When the PDF checksum changes, PAS reads that exact file again and rebuilds every matching signal from it.
+            Working Class Hero checks your canonical PDF whenever Matches opens and during the daily job refresh. When the PDF checksum changes, Working Class Hero reads that exact file again and rebuilds every matching signal from it.
           </p>
 
           <ResumeConnectionStatus
@@ -60,7 +60,7 @@ export default async function ResumeSettingsPage(
             <div className="flex min-w-0 flex-col items-stretch gap-3 p-4 sm:flex-row sm:items-center sm:justify-between">
               <div className="min-w-0">
                 <p className="text-xs font-black uppercase tracking-wider text-asphalt/40">Canonical resume</p>
-                <p className="mt-1 break-words font-bold">PAS_Resume_MASTER.pdf</p>
+                <p className="mt-1 break-words font-bold">Akshit_Gupta_Resume.pdf</p>
               </div>
             <a
               href={MASTER_PDF_URL}
@@ -73,12 +73,12 @@ export default async function ResumeSettingsPage(
             </div>
             <iframe
               src={MASTER_PDF_PREVIEW_URL}
-              title="Latest PAS master resume PDF"
+              title="Latest Working Class Hero master resume PDF"
               className="block h-[520px] w-full max-w-full border-0 bg-white sm:h-[720px]"
               loading="lazy"
             />
             <p className="border-t border-black/5 px-4 py-3 text-xs text-asphalt/50">
-              This preview is served by Google Drive and follows your Drive permissions. PAS requests access only to the PDF you explicitly choose; it cannot browse the rest of your Drive.
+              This preview is served by Google Drive and follows your Drive permissions. Working Class Hero requests access only to the PDF you explicitly choose; it cannot browse the rest of your Drive.
             </p>
           </div>
 

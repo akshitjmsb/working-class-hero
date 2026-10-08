@@ -252,7 +252,7 @@ export default function RecruiterInbox({ pipelineRecords, profile, resumeSync }:
 
         <div className="mt-4 flex flex-wrap items-center gap-2 border-t border-black/5 pt-3 text-[10px] font-semibold text-asphalt/45">
           <span className="rounded-full bg-parc-emerald/10 px-2.5 py-1 text-parc-emerald">Browser session only</span>
-          <span>No email or token stored by PAS</span>
+          <span>No email or token stored by Working Class Hero</span>
           {profile && (
             <a href={profile.sourceUrl} target="_blank" rel="noopener noreferrer" className="font-bold underline decoration-asphalt/20 underline-offset-2">
               {profile.sourceTitle} ↗
@@ -266,14 +266,14 @@ export default function RecruiterInbox({ pipelineRecords, profile, resumeSync }:
         <div className="rounded-2xl bg-plateau-pink/10 p-4 text-sm font-semibold text-plateau-pink">
           {error ?? configError}
           {(error ?? configError)?.toLowerCase().includes('gmail api') && (
-            <span> Enable the Gmail API for the existing PAS Google Cloud project, then reconnect.</span>
+            <span> Enable the Gmail API for the existing Working Class Hero Google Cloud project, then reconnect.</span>
           )}
         </div>
       )}
 
       {!connectedEmail && !loading && (
         <section className="rounded-3xl border border-black/5 bg-white p-6 text-sm leading-relaxed text-asphalt/60 shadow-sm">
-          <h3 className="font-display text-lg font-bold text-asphalt">What PAS will access</h3>
+          <h3 className="font-display text-lg font-bold text-asphalt">What Working Class Hero will access</h3>
           <ul className="mt-3 space-y-2">
             <li>• Search recent Gmail messages for recruiter and interview signals.</li>
             <li>• Read matching messages only inside this browser session.</li>
@@ -283,7 +283,7 @@ export default function RecruiterInbox({ pipelineRecords, profile, resumeSync }:
           <details className="mt-4 border-t border-black/5 pt-3 text-xs">
             <summary className="cursor-pointer font-bold text-asphalt/65">Google setup requirements</summary>
             <p className="mt-2">
-              The PAS Google Cloud project must have Gmail API enabled, this domain listed as an authorized JavaScript origin, and your account allowed on the OAuth consent screen.
+              The Working Class Hero Google Cloud project must have Gmail API enabled, this domain listed as an authorized JavaScript origin, and your account allowed on the OAuth consent screen.
             </p>
           </details>
         </section>
@@ -297,7 +297,7 @@ export default function RecruiterInbox({ pipelineRecords, profile, resumeSync }:
         <section className="rounded-3xl border border-black/5 bg-white p-8 text-center shadow-sm">
           <div className="text-4xl" aria-hidden>📨</div>
           <h3 className="mt-3 font-display text-lg font-bold text-asphalt">No recruiter messages found</h3>
-          <p className="mt-1 text-sm text-asphalt/50">PAS checked the last 120 days. Try Check inbox after a new outreach arrives.</p>
+          <p className="mt-1 text-sm text-asphalt/50">Working Class Hero checked the last 120 days. Try Check inbox after a new outreach arrives.</p>
         </section>
       )}
 
@@ -420,7 +420,7 @@ function ConversationCard({
       ) : (
         <div className="mt-4 flex justify-end border-t border-black/5 pt-3">
           {canReplyByEmail(conversation) ? (
-            <button onClick={onReply} className="rounded-full bg-asphalt px-4 py-2 text-xs font-black text-white">Reply in PAS</button>
+            <button onClick={onReply} className="rounded-full bg-asphalt px-4 py-2 text-xs font-black text-white">Reply in Working Class Hero</button>
           ) : (
             <a href={platformUrl} target="_blank" rel="noopener noreferrer" className="rounded-full bg-asphalt px-4 py-2 text-xs font-black text-white">
               Reply on {meta.label} ↗

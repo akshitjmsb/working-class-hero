@@ -57,7 +57,7 @@ export default function UpsideView({ companies, opportunities, loading, onShowOn
 
         <div className="mt-4 rounded-2xl border border-montroyal-amber/20 bg-montroyal-amber/10 px-4 py-3 text-xs leading-relaxed text-asphalt/70">
           {track === 'equity' ? (
-            <><strong className="text-asphalt">Upside is not liquidity.</strong> A private-company grant may end up valuable, worthless, or impossible to sell for years. PAS ranks company signals; only a written offer reveals your economics.</>
+            <><strong className="text-asphalt">Upside is not liquidity.</strong> A private-company grant may end up valuable, worthless, or impossible to sell for years. Working Class Hero ranks company signals; only a written offer reveals your economics.</>
           ) : (
             <><strong className="text-asphalt">This is total compensation, not base salary.</strong> The ranking combines pay-market strength, AI/data/product fit, financial capacity and live hiring signals. The exact role and level still determine the offer.</>
           )}

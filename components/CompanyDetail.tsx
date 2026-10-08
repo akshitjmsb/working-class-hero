@@ -671,7 +671,7 @@ function KeyPersonRow({
                 </button>
               </div>
               <p className="mt-2 text-[10px] leading-snug text-asphalt/40">
-                Editable draft only. PAS never sends messages automatically.
+                Editable draft only. Working Class Hero never sends messages automatically.
               </p>
             </div>
           )}

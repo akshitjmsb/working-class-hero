@@ -105,7 +105,7 @@ export async function getResumeSyncStatus(database: DB = db): Promise<ResumeSync
       ? {
           failureKind,
           error: missingPdfPermission
-            ? 'Reconnect Google once to let PAS read the canonical master PDF. Your last synced profile remains active.'
+            ? 'Reconnect Google once to let Working Class Hero read the canonical master PDF. Your last synced profile remains active.'
             : publicResumeSyncError(failureKind, Boolean(stored)),
         }
       : {}),

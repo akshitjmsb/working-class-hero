@@ -109,10 +109,10 @@ export default function ResumeFilePicker({ onConnected }: { onConnected: () => v
               body: JSON.stringify({ fileId }),
             });
             const result = await selected.json() as { error?: string };
-            if (!selected.ok) throw new Error(result.error ?? 'PAS could not verify that file.');
+            if (!selected.ok) throw new Error(result.error ?? 'Working Class Hero could not verify that file.');
             onConnected();
           } catch (selectionError) {
-            setError(selectionError instanceof Error ? selectionError.message : 'PAS could not verify that file.');
+            setError(selectionError instanceof Error ? selectionError.message : 'Working Class Hero could not verify that file.');
           } finally {
             setBusy(false);
           }
@@ -129,7 +129,7 @@ export default function ResumeFilePicker({ onConnected }: { onConnected: () => v
     <div className="mt-5 rounded-2xl border border-parc-emerald/20 bg-parc-emerald/5 p-4">
       <p className="text-sm font-black text-asphalt">Choose only the master PDF</p>
       <p className="mt-1 text-xs leading-relaxed text-asphalt/55">
-        Google will show PDFs you can access. PAS accepts only PAS_Resume_MASTER.pdf and rejects every other file ID.
+        Google will show PDFs you can access. Working Class Hero accepts only Akshit_Gupta_Resume.pdf and rejects every other file ID.
       </p>
       {error && <p role="alert" className="mt-3 text-xs font-bold text-plateau-pink">{error}</p>}
       <button
@@ -138,7 +138,7 @@ export default function ResumeFilePicker({ onConnected }: { onConnected: () => v
         disabled={busy}
         className="mt-4 inline-flex rounded-full bg-asphalt px-5 py-3 text-sm font-bold text-white hover:bg-asphalt/85 disabled:cursor-wait disabled:opacity-50"
       >
-        {busy ? 'Opening secure picker…' : 'Choose PAS_Resume_MASTER.pdf'}
+        {busy ? 'Opening secure picker…' : 'Choose Akshit_Gupta_Resume.pdf'}
       </button>
     </div>
   );
