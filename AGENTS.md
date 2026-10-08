@@ -29,3 +29,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
 
 <!-- END:nextjs-agent-rules -->
+
+## Conversational system of intelligence — 2026-10-08
+
+Working Class Hero is the durable intelligence backend for Robby. For company discussions, read `docs/SYSTEM.md`, get the research framework, resolve identity, and recall the investigation plus owner context before answering. Use the `system` CLI or authenticated MCP tools to save every available relevant turn, explicitly marking summaries versus exact supplied text. Record sourced evidence, stated interests, decisions, unresolved questions and generated outputs. Retry unchanged saves with the same request ID. Follow recall cursors when relevant context is older. The host chooses voice, report or sandboxed UI according to the question. The React site remains an optional view. Never claim unseen speech was recorded or an external Robby host is connected without a successful tool call. Private credentials live in `.env.intelligence.local`; never expose or commit them.
