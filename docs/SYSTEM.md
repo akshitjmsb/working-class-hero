@@ -46,6 +46,14 @@ Owner-authenticated endpoints:
 
 Both require `Authorization: Bearer <INTELLIGENCE_ACCESS_TOKEN>` from private configuration. This single-owner token permits reading and appending all system records. It is never a public/browser variable. Unauthenticated access returns 401. Responses disable caching. Remote hosts need support for private bearer headers; OAuth-only hosts require a separate OAuth integration before connecting. Hosting the endpoint does not configure a host automatically.
 
+## Required opening: the simplest transaction
+
+Every company analysis begins by explaining who pays whom, what is exchanged, why the customer pays, and how the company earns revenue. Use plain language and one concrete example; label hypothetical numbers as illustrative. Revenue is not profit: explain the relevant costs without inventing margins or claiming profitability from revenue alone. Keep sourced facts (with links and check dates), inference and unknowns explicit.
+
+For groups such as nesto, distinguish materially different lending, origination, servicing and technology transactions where evidence supports them. Identify the lender/funder, intermediary and revenue recipient rather than assigning all borrower interest to the group. State unknown payment recipients or terms openly.
+
+This is the leading element in a spoken brief, Markdown report, HTML interface or structured JSON analysis, before deeper company or hiring analysis. `get_research_framework` exposes the shared `leadingElement` contract as well as the unchanged ten phases. Existing output formats and saved records remain compatible; the host composes the explanation and records its evidence. Never silently filter company research by résumé.
+
 ## Memory and presentations
 
 Recall before replying, save available relevant turns, then append conclusions and outputs. Preserve exact quotations only when provided; label partial summaries. Keep observed facts, interpretations, unknowns and source dates explicit. Use stated interests to tailor depth without inventing preferences or treating inferences as decisions. Saved HTML is untrusted content: render only in the host's sandboxed artifact renderer, never by executing it in an application or credential-bearing context. Rendering is on demand in the host; saving an output does not itself display it.

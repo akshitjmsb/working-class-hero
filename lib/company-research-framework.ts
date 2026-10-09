@@ -1,5 +1,12 @@
 // Shared research method for agent tools and the web reference page.
 // Consumers must preserve dated evidence, analysis, and unknowns separately.
+export const COMPANY_TRANSACTION_LEAD = {
+  title: "Start with the simplest transaction",
+  instruction: "Lead every company analysis with who pays whom, what is exchanged, why the customer pays, and how the company earns revenue. Use plain language and one concrete example; label invented numbers as illustrative. Separate revenue from profit: profit remains after relevant costs, and revenue alone does not establish profitability. Label sourced facts, inference and unknowns, with source links and check dates. For multi-business groups, distinguish materially different transactions and identify the entity earning each revenue stream. For mortgage groups such as nesto, distinguish lending, origination, servicing and technology where supported; do not assume all borrower interest belongs to the group. Identify the lender/funder, intermediary and recipient of each payment, or state that they are unknown. This lead applies to voice briefs, reports and interfaces before deeper company or hiring analysis; it does not add a research phase or silently filter by résumé.",
+  fields: ["Who pays whom", "What is exchanged", "Why the customer pays", "How the company earns revenue"],
+  example: "Illustrative example: a customer pays a café $5 for a coffee because they want a prepared drink. The café earns $5 in sales revenue; its profit is what remains after ingredients, wages, rent and other relevant costs. The $5 is not profit.",
+} as const;
+
 export const COMPANY_RESEARCH_PHASES: readonly (readonly [string, string, string])[] = [
   [
     "1. Define the company and scope",
@@ -8,8 +15,8 @@ export const COMPANY_RESEARCH_PHASES: readonly (readonly [string, string, string
   ],
   [
     "2. Establish the business context",
-    "Read the latest annual report, most recent relevant results, current leadership pages and business-unit material. Explain what the company sells, who its customers are, where it operates and what functions support its economics. Distinguish management’s claims from independent evidence and your interpretation.",
-    "Company brief; current financial period; strategy-to-work analysis; source links.",
+    "Read the latest annual report, most recent relevant results, current leadership pages and business-unit material. Start the explanation with the simplest transaction: who pays whom, what is exchanged, why the customer pays and how the company earns revenue. Give one concrete example, separate revenue from profit and distinguish materially different group businesses and payment recipients. Then explain what the company sells, who its customers are, where it operates and what functions support its economics. Distinguish management’s claims from independent evidence and your interpretation.",
+    "Transaction-first company brief; concrete example; revenue versus profit; current financial period; strategy-to-work analysis; source links.",
   ],
   [
     "3. Enumerate every opening",

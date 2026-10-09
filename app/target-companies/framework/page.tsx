@@ -1,4 +1,4 @@
-import { COMPANY_RESEARCH_PHASES as phases } from "@/lib/company-research-framework";
+import { COMPANY_RESEARCH_PHASES as phases, COMPANY_TRANSACTION_LEAD as transactionLead } from "@/lib/company-research-framework";
 import type { Metadata } from "next";
 import Link from "next/link";
 export const metadata: Metadata = {
@@ -11,7 +11,7 @@ export default function FrameworkPage() {
   return (
     <>
       <p className="research-meta">
-        REUSABLE PLAYBOOK · VERSION 1 · SEPTEMBER 13, 2026
+        REUSABLE PLAYBOOK · VERSION 2 · OCTOBER 9, 2026
       </p>
       <h1>Target-company research framework</h1>
       <p>
@@ -20,6 +20,12 @@ export default function FrameworkPage() {
         repeated for another employer. The aim is to understand the company’s
         work and hiring landscape before making candidate-fit decisions.
       </p>
+      <section className="research-section">
+        <h2>{transactionLead.title}</h2>
+        <p>{transactionLead.instruction}</p>
+        <ul>{transactionLead.fields.map((field) => <li key={field}>{field}</li>)}</ul>
+        <p>{transactionLead.example}</p>
+      </section>
       <div className="research-callout">
         <strong>Three distinct evidence layers</strong>
         <p>

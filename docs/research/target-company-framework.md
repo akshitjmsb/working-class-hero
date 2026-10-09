@@ -1,8 +1,11 @@
 # Target-company research framework
-Version 1 — 2026-09-13. First application: Intact Financial Corporation.
+Version 2 — 2026-10-09. First application: Intact Financial Corporation.
 
 ## Purpose
 Understand an employer and its actual hiring landscape before candidate matching. Preserve explicit user constraints: Intact is priority 1 because of proximity; do not use the résumé to filter. No outreach is authorised by a research request.
+
+## Required leading explanation
+Begin every company analysis with the simplest underlying transaction: who pays whom, what is exchanged, why the customer pays, and how the company earns revenue. Give one concrete example in plain language, marking hypothetical amounts as illustrative. Separate revenue from profit after relevant costs. Label sourced facts, inference and unknowns with dates and links. For multi-business groups, distinguish materially different transactions and their revenue recipients; do not assume all borrower interest belongs to a mortgage group such as nesto. This opening applies to voice, report, interface and structured JSON outputs and preserves all ten research phases and the no-silent-résumé-filtering rule.
 
 ## Repeatable workflow
 1. Establish legal entity, brands, official domains, geography, board coverage and snapshot date. The user’s search scope is Montréal only: include multi-office postings only when Montréal is explicit, and exclude neighbouring cities alone. Apply this geographic scope to counts, examples, filters and role routes; retain broader raw collection only as provenance.

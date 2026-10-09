@@ -22,6 +22,9 @@ jobs:
 
       - run: npm ci
 
+      - name: Company analysis contract
+        run: node --import tsx --test tests/company-transaction.test.ts
+
       - name: Typecheck
         run: npm run typecheck
 

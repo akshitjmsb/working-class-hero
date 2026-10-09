@@ -2,7 +2,7 @@
 // Run: node --import tsx scripts/company-intelligence.ts montreal "Intact"
 import { bundledCompanies } from '../lib/companies';
 import { isCityId } from '../lib/cities';
-import { COMPANY_RESEARCH_PHASES } from '../lib/company-research-framework';
+import { COMPANY_RESEARCH_PHASES, COMPANY_TRANSACTION_LEAD } from '../lib/company-research-framework';
 
 const [city, ...words] = process.argv.slice(2);
 const query = words.join(' ').trim();
@@ -22,6 +22,7 @@ console.log(JSON.stringify({
   identityStatus: matches.length === 1 ? 'single_stored_match' : matches.length ? 'ambiguous' : 'not_in_stored_dataset',
   evidenceStatus: 'stored_snapshot_not_live_verified',
   instruction: 'Confirm company identity and scope. Recheck time-sensitive claims against current sources. Keep observed facts, analysis and unknowns separate. Apply the framework to the requested city; historical Montréal examples do not override that scope.',
+  leadingElement: COMPANY_TRANSACTION_LEAD,
   companies: matches,
   framework: COMPANY_RESEARCH_PHASES.map(([phase, method, output]) => ({ phase, method, output })),
 }, null, 2));
